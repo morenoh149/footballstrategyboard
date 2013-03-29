@@ -44,8 +44,8 @@ function draw_field() {
       y = evt.elientY + document.body.scrollTop +
         document.doucmentElement.scrollTop;
     } else {
-      x = evt.pageX - ((w-FIELD_X)/2);
-      y = evt.pageY;
+      x = evt.pageX - ((w-FIELD_X)/2)+MARGIN;
+      y = evt.pageY + MARGIN;
     }
 console.log("x: " + x + "y: " + y);
     this.ox = x - 10;
