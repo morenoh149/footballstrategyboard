@@ -58,7 +58,7 @@ console.log("x: " + x + "y: " + y);
     if (g_masterPathArray.length == 0) {
       g_masterPathArray[0] = ["M", this.ox, this.oy];
       g_masterDrawingBox = paper.path(g_masterPathArray);
-      g_masterDrawingBox.attr({stroke: "#000", "stroke-width": 3});
+      g_masterDrawingBox.attr({stroke: "white", "stroke-width": 5});
     } else {
       g_masterPathArray[g_masterPathArray.length] = ["L", this.ox, this.oy];
     }
