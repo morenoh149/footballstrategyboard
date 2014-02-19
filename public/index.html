@@ -4,15 +4,14 @@
     <script type="text/javascript" src="raphael.js"></script>  
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="football.js"></script>  
-    <style type="text/css">  
-    </style>  
-  </head>  
-  <body>  
-    <script>
-      window.onload = function () {
-        draw_field();
-        alert("you can draw on this with your mouse and move the circles");
-      }
-    </script>
-  </body>  
-</html> 
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+  <script>
+    $(function() {
+      draw_field();
+    });
+  </script>
+  </body>
+</html>

@@ -24,7 +24,8 @@ function draw_field() {
   GOAL_X =        SCALE * 1.5,
   GOAL_Y =        SCALE * 7.5,
   MARGIN =        SCALE * 2,
-  FOOTER_ORIG = (FIELD_Y + (MARGIN * 2));
+  FOOTER_ORIG = (FIELD_Y + (MARGIN * 2)),
+  playerRadius = MARGIN/1;
   
   var paper = Raphael((w-FIELD_X)/2, 0,
                       FIELD_X + (MARGIN * 2),
@@ -122,48 +123,48 @@ console.log("x: " + x + "y: " + y);
         this.attr({cx: this.ox + dx, cy: this.oy + dy});
   },
   circle_up = function () {
-        this.animate({r: MARGIN/1.5, opacity: 1}, 500, ">");
+        this.animate({r: playerRadius, opacity: 1}, 500, ">");
   }; 
   //create red circles
-  var circle_a01 = paper.circle(MARGIN, FOOTER_ORIG + MARGIN, MARGIN / 1.5);
-  var circle_a02 = paper.circle(MARGIN*3, FOOTER_ORIG+MARGIN, MARGIN / 1.5);
-  var circle_a03 = paper.circle(MARGIN*5, FOOTER_ORIG+MARGIN, MARGIN / 1.5);
-  var circle_a04 = paper.circle(MARGIN*7, FOOTER_ORIG+MARGIN, MARGIN / 1.5);
-  var circle_a05 = paper.circle(MARGIN*9, FOOTER_ORIG+MARGIN, MARGIN / 1.5);
-  var circle_a06 = paper.circle(MARGIN, FOOTER_ORIG+(MARGIN*3), MARGIN/1.5);
+  var circle_a01 = paper.circle(MARGIN, FOOTER_ORIG + MARGIN, playerRadius);
+  var circle_a02 = paper.circle(MARGIN*3, FOOTER_ORIG+MARGIN, playerRadius);
+  var circle_a03 = paper.circle(MARGIN*5, FOOTER_ORIG+MARGIN, playerRadius);
+  var circle_a04 = paper.circle(MARGIN*7, FOOTER_ORIG+MARGIN, playerRadius);
+  var circle_a05 = paper.circle(MARGIN*9, FOOTER_ORIG+MARGIN, playerRadius);
+  var circle_a06 = paper.circle(MARGIN, FOOTER_ORIG+(MARGIN*3), playerRadius);
   var circle_a07 = paper.circle(MARGIN*3,FOOTER_ORIG+(MARGIN * 3),
-                                MARGIN/1.5);
+                                playerRadius);
   var circle_a08 = paper.circle(MARGIN*5, FOOTER_ORIG+(MARGIN * 3),
-                                MARGIN/1.5);
+                                playerRadius);
   var circle_a09 = paper.circle(MARGIN * 7, FOOTER_ORIG + (MARGIN * 3),
-                                MARGIN / 1.5);
+                                playerRadius);
   var circle_a10 = paper.circle(MARGIN * 9, FOOTER_ORIG + (MARGIN * 3),
-                                MARGIN / 1.5);
+                                playerRadius);
   var circle_a11 = paper.circle(MARGIN * 11, FOOTER_ORIG + (MARGIN * 3),
-                                MARGIN / 1.5);
+                                playerRadius);
   //create blue circles
   var circle_b01 = paper.circle(MARGIN * 15, FOOTER_ORIG + MARGIN,
-                                MARGIN/1.5);
+                                playerRadius);
   var circle_b02 = paper.circle(MARGIN * 17, FOOTER_ORIG + MARGIN,
-                                MARGIN/1.5);
+                                playerRadius);
   var circle_b03 = paper.circle(MARGIN * 19, FOOTER_ORIG + MARGIN,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b04 = paper.circle(MARGIN * 21, FOOTER_ORIG + MARGIN,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b05 = paper.circle(MARGIN * 23, FOOTER_ORIG + MARGIN,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b06 = paper.circle(MARGIN * 17, FOOTER_ORIG + MARGIN*3,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b07 = paper.circle(MARGIN * 19, FOOTER_ORIG + MARGIN*3,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b08 = paper.circle(MARGIN * 21, FOOTER_ORIG + MARGIN*3,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b09 = paper.circle(MARGIN * 23, FOOTER_ORIG + MARGIN*3,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b10 = paper.circle(MARGIN * 25, FOOTER_ORIG + MARGIN*3,
-                                  MARGIN/1.5);
+                                  playerRadius);
   var circle_b11 = paper.circle(MARGIN * 25, FOOTER_ORIG + MARGIN,
-                                  MARGIN/1.5);
+                                  playerRadius);
   
   var red_circles = paper.set(circle_a01, circle_a02, circle_a03, circle_a04,
     circle_a05, circle_a06, circle_a07, circle_a08, circle_a09,
