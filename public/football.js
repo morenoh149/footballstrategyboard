@@ -9,6 +9,7 @@ function height() {
 var g_masterPathArray;
 var g_masterDrawingBox;
 var paper;
+var field;
 
 function draw_field() {
   var w = width(),
@@ -27,11 +28,11 @@ function draw_field() {
   FOOTER_ORIG = (FIELD_Y + (MARGIN * 2)),
   playerRadius = MARGIN/1;
   
-  var paper = Raphael((w-FIELD_X)/2, 0,
+  paper = Raphael((w-FIELD_X)/2, 0,
                       FIELD_X + (MARGIN * 2),
                       FIELD_Y + (MARGIN * 2) + 100);
   // Creates the field
-  var field = paper.rect(1, 1,
+  field = paper.rect(1, 1,
                          FIELD_X + (MARGIN * 2) - 2,
                          FIELD_Y + (MARGIN * 2) - 2);
   field.attr("fill", "green");
@@ -177,6 +178,11 @@ console.log("x: " + x + "y: " + y);
   var circle = paper.set(red_circles, blu_circles);
   circle.drag(circle_move, circle_start, circle_up);
 };
+var resize_field = function() {
+  //field.attr({'width': width(), 'height': height()});
+  paper.clear();
+  draw_field();
+};
 $(window).resize(function() {
-       draw_field();
+  resize_field();
 });
